@@ -1,0 +1,15 @@
+.section-header {
+	margin-top: 16px;
+}
+a:hover {
+	cursor: default;
+}
+.stepper {
+	margin: auto;
+	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+	.stepper {
+		width: auto;
+	}
+}

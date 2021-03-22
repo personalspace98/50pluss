@@ -1,0 +1,35 @@
+h3 {
+	width: 100%;
+	padding-bottom: 12px;
+}
+.card-img-top {
+	height: 300px;
+}
+i {
+	color: white;
+}
+button {
+	color: white;
+}
+.view img,
+.view video {
+	height: 300px;
+	width: 100%;
+}
+.blgImg {
+	height: 250px;
+	/* width: 80%; */
+	margin-top: 16px;
+	margin-bottom: 32px;
+	float: left;
+}
+.article {
+	width: 100%;
+	float: left;
+}
+
+@media only screen and (max-width: 600px) {
+	.blgImg {
+		height: auto;
+	}
+}

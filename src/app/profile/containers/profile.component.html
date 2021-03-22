@@ -1,0 +1,17 @@
+<div *ngIf="user$">
+  <div class="white px-4 section-header">
+    <h3>Profiel</h3>
+    <p class="grey-text pt-3">Verander je persoonlijke informatie</p>
+  </div>
+  
+  <div class="container py-5">
+    <div class="row mx-auto py-5">
+      <div class="col-md-4 mt-3">
+        <app-profile-user [user]="user$" (logout)="logoutUser($event)"></app-profile-user>
+      </div>
+      <div class="col-md-8 mt-3">
+          <app-main-profile [user]="user$" (profileUpdate)="updateProfile($event)"></app-main-profile>
+      </div>
+    </div>
+  </div>
+</div>

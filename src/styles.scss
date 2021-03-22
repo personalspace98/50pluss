@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "./assets/scss/mdb-pro.scss";
+// @import "./assets/scss/mdb-lite-pro.scss";
+hr {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.md-outline.select-wrapper + label {
+  top: 0.6em !important;
+  z-index: 2 !important;
+}
+
+app-welcome {
+  background-color: white;
+}
+
+hr {
+  margin-top: 3rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}

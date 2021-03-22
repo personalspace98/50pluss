@@ -1,0 +1,168 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg fixed-top navbar-light bg-white"
+  [containerInside]="false"
+  mdbStickyHeader
+  *ngIf="!show()"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand
+    ><a class="navbar-brand" href="/" routerLink="/"
+      ><img src="../../assets/img/logo-pup.png" alt="logo GJ" /></a
+  ></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/"
+          href="#"
+        >
+          Home<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/over-mij"
+          href="#"
+        >
+          Over mij</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/brieven"
+          href="#"
+          >Brieven</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/sollicitatie"
+          href="#"
+          >Sollicitatie</a
+        >
+      </li>
+      <!-- Dropdown -->
+      <!-- <li class="nav-item dropdown" dropdown>
+        <a
+          dropdownToggle
+          mdbWavesEffect
+          type="button"
+          class="nav-link dropdown-toggle waves-light"
+          mdbWavesEffect
+        >
+          Blog<span class="caret"></span
+        ></a>
+        <div
+          *dropdownMenu
+          class="dropdown-menu dropdown dropdown-primary"
+          role="menu"
+        >
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+            >Tijdlijn</a
+          >
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Posts</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+            >Nog iets?</a
+          >
+           <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+            >Separated link</a
+          >
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/tijdlijn"
+          href="#"
+          >Tijdlijn</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/blog"
+          href="#"
+          >Blog</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link waves-light"
+          mdbWavesEffect
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/contact"
+          href="#"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link" (click)="social('tw')">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="social('fb')">
+          <mdb-icon class="facebook" fab icon="facebook-f" size="lg"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="social('lk')">
+          <mdb-icon
+            class="linkedin"
+            fab
+            icon="linkedin-in"
+            size="1x"
+          ></mdb-icon>
+        </a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </a>
+      </li> -->
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->

@@ -1,0 +1,24 @@
+.view {
+  height: 50vh;
+}
+.view h1 {
+  font-weight: bold;
+}
+img {
+  width: 100%;
+  height: 450px;
+}
+.slider {
+  margin-bottom: 32px;
+}
+.carousel-control-prev-icon , .carousel-control-next-icon {
+  background-color: black;
+}
+
+.carousel-control-prev, .carousel-control-next {
+width: 5%;
+}
+
+.slider p {
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+<header>
+  <app-header
+    [user]="user$ | async"
+    [isLoggedIn]="isLoggedIn$ | async"
+    [isLoading]="isLoading$ | async"
+    [isAdmin]="isAdmin$ | async"
+    (logout)="onLogout($event)"
+  ></app-header>
+</header>
+
+<main>
+  <app-navbar *ngIf="!login"></app-navbar>
+  <router-outlet></router-outlet>
+  <app-footerr *ngIf="!login"></app-footerr>
+</main>

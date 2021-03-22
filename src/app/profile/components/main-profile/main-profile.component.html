@@ -1,0 +1,48 @@
+<mdb-card>
+	<mdb-card-body>
+		<h3 class="h2-responsive mb-4">
+			<strong>Verander je profiel</strong>
+		</h3>
+
+		<!--Body-->
+		<form [formGroup]="updateProfileForm">
+			<h5 class="h5-responsive">Gebruikers naam</h5>
+			<div class="md-form">
+				<i class="fa fa-user prefix"></i>
+				<input
+					type="text"
+					id="form1"
+					class="form-control"
+					mdbInput
+					formControlName="displayName"
+					value="testing"
+				/>
+				<label for="form1">Gebruikers name</label>
+			</div>
+
+			<h5 class="h5-responsive">Foto url</h5>
+			<div class="md-form">
+				<i class="fa fa-user prefix"></i>
+				<input
+					type="text"
+					id="form2"
+					class="form-control"
+					mdbInput
+					formControlName="photoUrl"
+				/>
+				<label for="form2">Foto url</label>
+			</div>
+
+			<div class="text-right">
+				<button
+					type="button"
+					mdbBtn
+					class="purple-gradient"
+					(click)="onProfileUpdate()"
+				>
+					Update profiel
+				</button>
+			</div>
+		</form>
+	</mdb-card-body>
+</mdb-card>

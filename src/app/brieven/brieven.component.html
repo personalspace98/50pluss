@@ -1,0 +1,227 @@
+<section
+	class="view intro-2"
+	style="
+		background-image: linear-gradient(
+				to bottom,
+				rgba(245, 246, 252, 0.52),
+				rgba(176, 162, 179, 0.7)
+			),
+			url(assets/img/writer-about.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		height: 50vh;
+	"
+>
+	<!-- <img
+src="assets/img/letters.jpg"
+class="img-fluid rounded"
+alt="letter photo"
+style="width: 80%; margin: auto; display: block;"
+/> -->
+	<div class="mask">
+		<div
+			class="container h-100 d-flex justify-content-center align-items-center"
+		>
+			<div class="row h-100 d-flex justify-content-center align-items-center">
+				<div
+					class="col-md-12 col-lg-12 text-center text-md-left mt-5 pt-4 pt-md-0 mt-lg-0 mb-5 mb-md-0"
+				>
+					<h1>Brieven</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4 col-md-12 mb-4" *ngFor="let data of data">
+			<!-- Card -->
+			<div class="card card-ecommerce">
+				<!-- Card image -->
+				<div class="view overlay">
+					<img
+						src="../../assets/img/letter.jpg"
+						class="img-fluid"
+						alt="GJ brieven tekoop"
+					/>
+
+					<a>
+						<div class="mask rgba-white-slight"></div>
+					</a>
+				</div>
+				<!-- Card image -->
+
+				<!-- Card content -->
+				<div class="card-body">
+					<!-- Category & Title -->
+					<h5 class="card-title mb-1">
+						<strong
+							><a class="dark-grey-text">{{ data.title }}</a></strong
+						>
+					</h5>
+					{{ data.description }}
+					<!-- <span class="badge grey mb-2">best rated</span> -->
+
+					<!-- Rating -->
+					<!-- <ul class="rating">
+            <li><i class="fas fa-star blue-text"></i></li>
+
+            <li><i class="fas fa-star blue-text"></i></li>
+
+            <li><i class="fas fa-star blue-text"></i></li>
+
+            <li><i class="fas fa-star blue-text"></i></li>
+
+            <li><i class="fas fa-star blue-text"></i></li>
+          </ul> -->
+
+					<!-- Card footer -->
+					<div class="card-footer pb-0">
+						<div class="row mb-0 justify-content-between">
+							<span class="float-left"><strong>€ 1.50</strong></span>
+
+							<span
+								(click)="addToCard(data.title, data.description, 1)"
+								class="buy"
+							>
+								<a
+									class="buy"
+									data-toggle="tooltip"
+									data-placement="top"
+									title="Zet in winkelwagen"
+									data-toggle="modal"
+									data-target="#cart-modal-ex"
+									><i class="fas fa-shopping-cart ml-3"></i
+								></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- Card content -->
+			</div>
+
+			<!-- Card -->
+		</div>
+		<!-- End col -->
+		<div class="col-12">
+			<div class="shoppingCard justify-content-between">
+				<a
+					class="nav-link dark-grey-text font-weight-bold"
+					href="#"
+					data-toggle="modal"
+					data-target="#cart-modal-ex"
+				>
+					<i class="fas fa-shopping-cart" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- End row -->
+</div>
+<!-- End container -->
+<div
+	class="modal fade cart-modal"
+	id="cart-modal-ex"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="myModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog" role="document">
+		<!-- Content -->
+		<div class="modal-content">
+			<!-- Header -->
+			<div class="modal-header">
+				<h4
+					class="modal-title font-weight-bold dark-grey-text"
+					id="myModalLabel"
+				>
+					Jouw shopping card
+				</h4>
+
+				<button
+					type="button"
+					class="close"
+					data-dismiss="modal"
+					aria-label="Close"
+				>
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<!-- Body -->
+			<div class="modal-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+
+							<th>Titel</th>
+
+							<th>Prijs</th>
+
+							<th>Hoeveelheid</th>
+
+							<th>Verwijder</th>
+						</tr>
+					</thead>
+
+					<tbody *ngFor="let product of products$; index as i">
+						<tr>
+							<th scope="row">{{ i + 1 }}</th>
+
+							<td>{{ product.title }}</td>
+
+							<td>€{{ product.price * product.qty }}0</td>
+
+							<td>{{ product.qty }}</td>
+
+							<td style="display: flex; justify-content: center">
+								<button
+									type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"
+									(click)="remove(i)"
+								>
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<span>Hoe wilt u betalen?</span>
+				<select
+					class="browser-default custom-select"
+					[(ngModel)]="paymentOption"
+				>
+					<option value="ideal">IDEAL</option>
+					<option value="creditcard">Credit card</option>
+				</select>
+
+				<button
+					class="btn purple-gradient btn-rounded btn-sm pay"
+					data-dismiss="modal"
+					(click)="pay()"
+				>
+					Betaal
+				</button>
+			</div>
+
+			<!-- Footer -->
+			<div class="modal-footer">
+				<button
+					type="button"
+					class="btn btn-rounded btn-sm white purple-gradient"
+					data-dismiss="modal"
+				>
+					Close
+				</button>
+			</div>
+		</div>
+		<!-- Content -->
+	</div>
+</div>
+<!-- Cart Modal -->

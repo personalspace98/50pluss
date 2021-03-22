@@ -1,0 +1,163 @@
+<section
+	class="view intro-2"
+	style="
+		background-image: linear-gradient(
+				to bottom,
+				rgba(245, 246, 252, 0.52),
+				rgba(176, 162, 179, 0.7)
+			),
+			url(assets/img/contact.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		height: 50vh;
+	"
+>
+	<!-- <img
+src="assets/img/letters.jpg"
+class="img-fluid rounded"
+alt="letter photo"
+style="width: 80%; margin: auto; display: block;"
+/> -->
+	<div class="mask">
+		<div
+			class="container h-100 d-flex justify-content-center align-items-center"
+		>
+			<div class="row h-100 d-flex justify-content-center align-items-center">
+				<div
+					class="col-md-12 col-lg-12 text-center text-md-left mt-5 pt-4 pt-md-0 mt-lg-0 mb-5 mb-md-0"
+				>
+					<h1><b>Contact</b></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Section: Contact v.2 -->
+<div class="container">
+	<section id="contact" class="text-center my-5 box">
+		<!-- Section heading -->
+		<!-- <h3
+      class="text-center title my-5 dark-black-text font-weight-bold wow fadeIn"
+      data-wow-delay="0.2s"
+    >
+      <strong>Contact me</strong>
+    </h3> -->
+
+		<!-- Section description -->
+		<p
+			class="grey-text w-responsive mx-auto mb-5 wow fadeIn"
+			data-wow-delay="0.2s"
+		>
+			Neem gerust contact met mij op als er vragen of opmerkingen zijn.
+		</p>
+
+		<div class="row wow fadeIn" data-wow-delay="0.4s">
+			<!-- Grid column -->
+			<div class="col-md-8 col-lg-9">
+				<form [formGroup]="contactForm" method="POST">
+					<!-- Grid row -->
+					<div class="row">
+						<!-- Grid column -->
+						<div class="col-md-6">
+							<div class="md-form mb-0">
+								<input
+									type="text"
+									id="name"
+									name="name"
+									class="form-control"
+									formControlName="name"
+								/>
+								<label for="name" class="">Naam</label>
+							</div>
+						</div>
+
+						<!-- Grid column -->
+						<div class="col-md-6">
+							<div class="md-form mb-0">
+								<input
+									type="email"
+									id="email"
+									class="form-control"
+									name="email"
+									formControlName="email"
+								/>
+								<label for="form52" class="">Email</label>
+							</div>
+						</div>
+					</div>
+					<!-- Grid row -->
+
+					<!-- Grid row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="md-form mb-0">
+								<input
+									type="text"
+									id="subject"
+									class="form-control"
+									name="subject"
+									formControlName="subject"
+								/>
+								<label for="subject" class="">Onderwerp</label>
+							</div>
+						</div>
+					</div>
+					<!-- Grid row -->
+
+					<!-- Grid row -->
+					<div class="row">
+						<!-- Grid column -->
+						<div class="col-md-12">
+							<div class="md-form mb-0">
+								<textarea
+									type="text"
+									id="message"
+									class="md-textarea form-control"
+									rows="3"
+									name="message"
+									formControlName="message"
+								></textarea>
+								<label for="message">Bericht</label>
+							</div>
+						</div>
+					</div>
+					<!-- Grid row -->
+
+					<div class="text-center text-md-left mb-5 mt-4">
+						<input
+							type="submit"
+							name="submit"
+							class="btn btn-rounded purple-gradient font-weight-bold"
+							style="margin-left: 0px"
+							(click)="email()"
+						/>
+					</div>
+				</form>
+			</div>
+			<!-- Grid column -->
+
+			<!-- Grid column -->
+			<div class="col-md-4 col-lg-3">
+				<ul class="list-unstyled contact-icons float-md-right">
+					<li>
+						<i class="fas fa-map-marker-alt fa-2x title"></i>
+						<p>Gelderland, NL</p>
+					</li>
+
+					<!-- <li>
+              <i class="fas fa-phone fa-2x title"></i>
+              <p>+ 01 234 567 89</p>
+            </li>
+
+            <li>
+              <i class="fas fa-envelope fa-2x title"></i>
+              <p>contact@gmail.com</p>
+            </li> -->
+				</ul>
+			</div>
+			<!-- Grid column -->
+		</div>
+	</section>
+	<!-- Section: Contact v.2 -->
+</div>

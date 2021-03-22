@@ -1,0 +1,30 @@
+<div class="white px-4 section-header">
+	<h3>Brieven</h3>
+	<p class="grey-text pt-3">
+		Hier kun je je aangekochte brieven bekijken en downloaden.
+	</p>
+</div>
+
+<div class="container-fluid pb-5 table-responsive text-nowrap" *ngIf="letters">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col" class="small">Brief</th>
+				<th scope="col">Beschrijving</th>
+				<th scope="col">Download</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let letter of letters; let i = index" [attr.data-index]="i">
+				<th scope="row">{{ i }}</th>
+				<td class="small">{{ letter.title }}</td>
+				<td>{{ letter.description }}</td>
+				<td>
+					<a download="brief.pdf" href="{{ letter.download_link }}">Download</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- Dashboard view -->

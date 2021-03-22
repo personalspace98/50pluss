@@ -1,0 +1,24 @@
+.card {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 500px;
+}
+img {
+  height: 280px;
+}
+.card.card-ecommerce .card-footer a {
+  color: white;
+}
+.view img,
+.view video {
+  height: 250px;
+  width: 100%;
+}
+h5 {
+  text-align: left;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+p {
+  height: 100px;
+}

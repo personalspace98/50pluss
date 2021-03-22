@@ -1,0 +1,48 @@
+.view {
+	height: 100vh;
+}
+
+#about {
+	img {
+		width: 350px;
+		height: 200px;
+	}
+}
+
+ul.stepper {
+	padding-top: 0;
+}
+.stepper-vertical li .step-content {
+	padding: 0.1rem;
+	border-radius: 5px;
+}
+.mt-5,
+.my-5 {
+	margin-top: 0rem !important;
+}
+.pricing-card .price .number::before {
+	content: '$' !important;
+}
+.container-fluid {
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: whitesmoke;
+	border-top: solid lightgrey 2px;
+	border-bottom: solid lightgrey 2px;
+}
+h1,
+h6 {
+	color: black;
+}
+.view img,
+.view video {
+	position: relative;
+	display: block;
+	// height: 550px;
+}
+@media only screen and (max-width: 800px) {
+	.img-fluid,
+	.stepper {
+		display: none !important;
+	}
+}

@@ -1,0 +1,51 @@
+.container {
+	margin-top: 32px;
+}
+.view h1 {
+	font-weight: bold;
+}
+a:hover {
+	color: grey !important;
+}
+.shoppingCard {
+	float: right;
+	margin-bottom: 32px;
+	background-color: whitesmoke;
+	border-radius: 50%;
+	padding: 15px 15px;
+}
+.shoppingCard a {
+	padding: 0px;
+}
+.shoppingCard a i {
+	font-size: 25px;
+	color: grey;
+}
+.container img {
+	width: 100%;
+	height: 300px;
+}
+.pay {
+	float: right;
+}
+.modal button {
+	float: left !important;
+	margin-left: 0px;
+}
+.modal-footer {
+	justify-content: flex-start;
+}
+a:hover {
+	cursor: default;
+}
+.buy:hover {
+	cursor: pointer;
+}
+.shoppingCard:hover,
+.fa-shopping-cart:hover {
+	cursor: pointer;
+}
+h4 {
+	margin: 16px;
+	text-align: center;
+}
